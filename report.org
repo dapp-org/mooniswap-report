@@ -319,7 +319,14 @@ integration code).
 
 *** Simplify branches in ~deposit~
 
-In the ~totalSupply == 0~ case, we end up iterating through the ~token~ array one more time than is necessary.
+The ~deposit~ function has slightly different behaviour for the initial deposit,
+when ~totalSupply == 0~. This condition is checked in four different places,
+[[https://github.com/CryptoManiacsZone/mooniswap/blob/21fb05adc4c21208a42fac5c55ff4df2502ce403/contracts/Mooniswap.sol#L151][L151]], [[https://github.com/CryptoManiacsZone/mooniswap/blob/21fb05adc4c21208a42fac5c55ff4df2502ce403/contracts/Mooniswap.sol#L170][L170]], [[https://github.com/CryptoManiacsZone/mooniswap/blob/21fb05adc4c21208a42fac5c55ff4df2502ce403/contracts/Mooniswap.sol#L171][L171]] and [[https://github.com/CryptoManiacsZone/mooniswap/blob/21fb05adc4c21208a42fac5c55ff4df2502ce403/contracts/Mooniswap.sol#L177][L177]].
+
+For increased readability, this could instead be simplified to one =if= statement.
+
+If the code was simplified in this way, it would be apparent that in the ~totalSupply == 0~ case,
+we end up iterating through the ~token~ array one more time than is necessary:
 
 *** Prefer ~calldata~ to ~memory~ as location for external methods
 

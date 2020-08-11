@@ -36,7 +36,7 @@ This work was carried out against the following git repositories:
 
 The team discovered 5 issues, two of which were of high severity, as well as proposing
 several code quality improvements and gas optimizations. All but one discovered issues
-have been addressed by the Mooniswap team as of [[https://github.com/CryptoManiacsZone/mooniswap/commit/01b5c2fcb452d1553d84c2364e94e17905aa9773][=01b5c2fcb452d1553d84c2364e94e17905aa9773=]].
+have been addressed by the Mooniswap team as of [[https://github.com/CryptoManiacsZone/mooniswap/commit/3a6fbf00faed063fa1221f614b4d567ddf3ee620][=3a6fbf00faed063fa1221f614b4d567ddf3ee620=]].
 
 ** Scope
 
@@ -75,7 +75,7 @@ A revision history for this document can be found [[https://github.com/dapp-org/
 
 | *Recommendation*                                                           | *Severity* | *Likelihood* | *Accepted* | *Commit* |
 |----------------------------------------------------------------------------+------------+--------------+------------+----------|
-| [[*Early ~deposit~ to a pool is vulnerable to theft by front-running][Early ~deposit~ to a pool is vulnerable to theft by front-running]] | high       | medium       | ???        | ???      |
+| [[*Early ~deposit~ to a pool is vulnerable to theft by front-running][Early ~deposit~ to a pool is vulnerable to theft by front-running]] | high       | medium       | yes        | [[https://github.com/CryptoManiacsZone/mooniswap/commit/3a6fbf00faed063fa1221f614b4d567ddf3ee620][3a6fbf0]]  |
 |----------------------------------------------------------------------------+------------+--------------+------------+----------|
 | [[Owner can generate free LP shares using reentrancy in ~rescueFunds~]]        | high       | low          | yes        | [[https://github.com/CryptoManiacsZone/mooniswap/commit/01b5c2fcb452d1553d84c2364e94e17905aa9773][01b5c2f]]  |
 |----------------------------------------------------------------------------+------------+--------------+------------+----------|
